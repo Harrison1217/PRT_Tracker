@@ -18,7 +18,7 @@ namespace PRT.Model
         [Display(Name = "1.5 Mile Run Time Minutes")]
         public double MM { get; set; }
         [Display(Name ="1.5 Mile Run Time Seconds")]
-        public double SS { get; set; }
+        public decimal SS { get; set; }
 
 
 

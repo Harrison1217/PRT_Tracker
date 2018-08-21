@@ -51,6 +51,22 @@
     <Compile Include="Migrations\201808201353252_changed runtime to a string.Designer.cs">
       <DependentUpon>201808201353252_changed runtime to a string.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808201745174_mm and ss change value type.cs" />
+    <Compile Include="Migrations\201808201745174_mm and ss change value type.Designer.cs">
+      <DependentUpon>201808201745174_mm and ss change value type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808201749024_update.cs" />
+    <Compile Include="Migrations\201808201749024_update.Designer.cs">
+      <DependentUpon>201808201749024_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808201801427_update1.cs" />
+    <Compile Include="Migrations\201808201801427_update1.Designer.cs">
+      <DependentUpon>201808201801427_update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808212020590_change MM to double.cs" />
+    <Compile Include="Migrations\201808212020590_change MM to double.Designer.cs">
+      <DependentUpon>201808212020590_change MM to double.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NutritionGuide.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +89,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808201353252_changed runtime to a string.resx">
       <DependentUpon>201808201353252_changed runtime to a string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808201745174_mm and ss change value type.resx">
+      <DependentUpon>201808201745174_mm and ss change value type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808201749024_update.resx">
+      <DependentUpon>201808201749024_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808201801427_update1.resx">
+      <DependentUpon>201808201801427_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808212020590_change MM to double.resx">
+      <DependentUpon>201808212020590_change MM to double.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

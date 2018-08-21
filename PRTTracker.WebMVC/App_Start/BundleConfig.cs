@@ -23,8 +23,12 @@ namespace PRTTracker.WebMVC
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/animate.css",
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/icomoon.css",
+                      "~/Content/simple-line-icons.css",
+                      "~/Content/site.css",
+                      "~/Content/style.css"));
         }
     }
 }

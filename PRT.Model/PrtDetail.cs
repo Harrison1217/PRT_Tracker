@@ -14,11 +14,30 @@ namespace PRT.Model
         [Display(Name ="Number of Pushups")]
         public int NumPushups { get; set; }
 
-        [Display(Name ="Number of Situps")]
+        [Display(Name = "Number of Situps")]
         public int NumSitups { get; set; }
 
-        [Display(Name ="1.5 Mile Run Time")]
-        public string RunTime { get; set; }
+  
+        public double MM { get; set; }
+        
+        public decimal SS { get; set; }
+        private string runTime;
+        [Display(Name = "1.5 Mile Run Time")]
+        public string RunTime
+        {
+            get { return runTime; }
+            set
+            {
+                if (SS >= 0 && SS <= 9)
+                {
+                    runTime = String.Format(MM + ":0" + SS);
+                }
+                else if (SS > 9)
+                {
+                    runTime = value;
+                }
+            }
+        }
 
         [Display(Name ="Date of PRT")]
         public DateTime PrtDate { get; set; }

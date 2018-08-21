@@ -87,8 +87,10 @@ namespace PRT.Services
                         PrtId = entity.prtID,
                         NumPushups = entity.NumPushups,
                         NumSitups = entity.NumSitUps,
+                        MM = entity.MM,
+                        SS = entity.SS,
                         RunTime = entity.RunTime,
-                        PrtDate = entity.PrtDate,
+                        PrtDate = entity.PrtDate
                     };
 
             }

@@ -20,9 +20,33 @@ namespace PRT.Data
         [Required]
         public double MM { get; set; }
         [Required]
-        public double SS { get; set; }
+        public decimal SS { get; set; }
+
+        
+        
+        private string runTime;
         [Required]
-        public string RunTime { get; set; }
+        public string RunTime
+        {
+            get { return runTime; }
+            set
+            {
+                if (SS >= 0 && SS <= 9)
+                {
+                    runTime = String.Format(MM + ":0" + SS);
+                }
+                else if (SS > 9)
+                {
+                    runTime = value;
+                } 
+                
+                if (SS >= 60)
+                {
+                    
+                }
+            }
+        }
+
         [Required]
         public DateTime PrtDate { get; set; }
 

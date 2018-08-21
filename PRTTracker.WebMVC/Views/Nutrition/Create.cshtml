@@ -1,10 +1,10 @@
 ﻿@model PRT.Model.NutritionCreate
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Meal Create";
 }
 
-<h2>Create</h2>
+<h2>Enter Your Meals for the Day</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>NutritionCreate</h4>
+        <h4>Nutrition Record</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

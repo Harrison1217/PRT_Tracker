@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<PRT.Model.GoalList>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "My Goals";
 }
 
-<h2>Index</h2>
+<h2>My Goals</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -22,9 +22,6 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.GoalId)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
@@ -37,9 +34,6 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GoalId)
-                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>

@@ -3,10 +3,10 @@
 @{
                 /**/
 
-                ViewBag.Title = "Index";
+                ViewBag.Title = "Your PRT Scores";
 }
 
-<h2>Index</h2>
+<h2>Your PRT Scores</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -26,9 +26,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.prtId)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.NumPushups)
         </th>
         <th>
@@ -46,9 +43,6 @@
     @foreach (var item in Model)
     {
 <tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.prtId)
-    </td>
     <td>
         @Html.DisplayFor(modelItem => item.NumPushups)
     </td>

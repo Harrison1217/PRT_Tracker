@@ -33,7 +33,10 @@ namespace PRTTracker.WebMVC.Controllers
             if (!ModelState.IsValid) return View(model);
 
             var service = CreatePrtScoresServices();
-
+            if (model.SS >= 60)
+            {
+                ModelState.AddModelError("", "Seconds enter exceeds 59. Please re-enter.");
+            }
             if (service.PrtCreate(model))
             {
                 TempData["SaveResult"] = "Your PRT Scores Have Been saved.";

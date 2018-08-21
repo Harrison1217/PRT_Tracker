@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<PRT.Model.NutritionList>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Nutrition Guide";
 }
 
-<h2>Index</h2>
+<h2>Calorie Counter</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -21,9 +21,6 @@
 }
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NutritionId)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.TotalCalories)
         </th>
@@ -48,9 +45,6 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NutritionId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TotalCalories)
             </td>
