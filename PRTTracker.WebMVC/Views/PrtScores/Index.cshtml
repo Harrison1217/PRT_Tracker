@@ -1,0 +1,72 @@
+﻿@model IEnumerable<PRT.Model.PrtScoresList>
+
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert lert-success fadein" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.prtId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumPushups)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumSitups)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RunTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrtDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.prtId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NumPushups)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NumSitups)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RunTime)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PrtDate)
+    </td>
+    <td>
+
+        @Html.ActionLink("Details", "Details", new { id=item.prtId})
+
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,98 @@
+﻿@model PRT.Model.NutritionDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NutritionDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NutritionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NutritionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Breakfast)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breakfast)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaloriesFB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaloriesFB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lunch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lunch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaloriesFL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaloriesFL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dinner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dinner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaloriesFD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaloriesFD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCalories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCalories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+   
+    @Html.ActionLink("Back to List", "Index")
+</p>

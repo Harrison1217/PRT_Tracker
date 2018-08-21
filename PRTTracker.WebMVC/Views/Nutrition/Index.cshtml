@@ -1,0 +1,80 @@
+﻿@model IEnumerable<PRT.Model.NutritionList>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert lert-success fadein" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NutritionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCalories)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Breakfeast)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lunch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dinner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NutritionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCalories)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Breakfeast)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lunch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dinner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+
+                @Html.ActionLink("Details", "Details", new { id=item.NutritionId})
+
+            </td>
+        </tr>
+    }
+
+</table>

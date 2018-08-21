@@ -1,0 +1,58 @@
+﻿@model PRT.Model.PrtDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PrtDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrtId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrtId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumPushups)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumPushups)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumSitups)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumSitups)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RunTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RunTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrtDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrtDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    
+    @Html.ActionLink("Back to List", "Index")
+</p>
