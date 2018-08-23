@@ -1,4 +1,5 @@
-﻿using PRT.Data;
+﻿using PRT.Contracts;
+using PRT.Data;
 using PRT.Model;
 using PRTTracker.WebMVC.Models;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PRT.Services
 {
-    public class GoalServices
+    public class GoalServices : IGoalService
     {
         private readonly Guid _userId;
 

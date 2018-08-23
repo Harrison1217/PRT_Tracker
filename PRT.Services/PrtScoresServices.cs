@@ -1,4 +1,5 @@
-﻿using PRT.Data;
+﻿using PRT.Contracts;
+using PRT.Data;
 using PRT.Model;
 using PRTTracker.WebMVC.Models;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PRT.Services
 {
-    public class PrtScoresServices
+    public class PrtScoresServices : IPRTService
     {
         private readonly Guid _userId;
         

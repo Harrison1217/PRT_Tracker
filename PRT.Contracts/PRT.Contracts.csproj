@@ -40,7 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IGoalService.cs" />
+    <Compile Include="INutritionServices.cs" />
+    <Compile Include="IPRTService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PRT.Model\PRT.Model.csproj">
+      <Project>{34E5F027-3F28-42CD-B695-0B5225E502C1}</Project>
+      <Name>PRT.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

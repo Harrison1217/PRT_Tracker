@@ -15,7 +15,7 @@ namespace PRTTracker.WebMVC.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Contact the Craeator Here";
+            ViewBag.Message = "Contact the Creator Here";
 
             return View();
         }
