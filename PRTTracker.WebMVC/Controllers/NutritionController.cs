@@ -61,3 +61,12 @@ namespace PRTTracker.WebMVC.Controllers
         }
     }
 }
+
+/* TODO: Maybe add like an input box for people to contact you as well*/
+/* TODO: Maybe add list/grid views for your index like Paul had.*/
+/* Your background picture is cool - it really brightens up the entire site*/
+/* The pictures under the table links are really cool!*/
+/* Your code is very clean */
+/* TODO: Maybe add edit/delete to your tables in case someone has a typo or they no longer need the data.*/
+/* This app could really be useful outside of just navy as well.Version 2.0 could include just basic workout goals or even
+    other branches of the military to track PT goals*/

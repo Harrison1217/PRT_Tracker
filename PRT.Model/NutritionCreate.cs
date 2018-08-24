@@ -9,7 +9,8 @@ namespace PRT.Model
 {
     public class NutritionCreate
     {
-
+        /*You really put alot in to your tabls. Between min/max length and the display 
+         * names, you've added alot of decorators that really add to the site.*/
         
         [MinLength(2, ErrorMessage ="Please add more detail.")]
         [MaxLength(8000)]
