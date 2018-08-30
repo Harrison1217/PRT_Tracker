@@ -25,7 +25,7 @@ table{
     width: 100%;
     max-width:100%;
     margin-bottom:20px;
-    background-color:white;
+    background-color:blue;
 }
 
 a {
@@ -101,8 +101,9 @@ h1, h2, h3, h4, h5, h6, figure {
     border: 2px solid #FFD700;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #23cb8a !important;
-  border-color: #23cb8a !important;
+  background: #FFD700 !important;
+  border-color: #00008B !important;
+  color: #00008B !important;
 }
 .btn-primary.btn-outline {
   background: #00008B;
