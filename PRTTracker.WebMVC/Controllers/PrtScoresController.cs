@@ -62,5 +62,38 @@ namespace PRTTracker.WebMVC.Controllers
             var service = new PrtScoresServices(userId);
             return service;
         }
+
+        public ActionResult PRTChartPushUps()
+        {
+            var service = CreatePrtScoresServices();
+            ViewBag.PRT = service.GetPRTChartPushUps();
+
+            var labels = service.GetPRTLabels();
+            ViewBag.Labels = service.FormatDateTime(labels);
+
+            return View();
+        }
+
+        public ActionResult PRTChartSitUps()
+        {
+            var service = CreatePrtScoresServices();
+            ViewBag.PRT = service.GetPRTChartSitUps();
+
+            var labels = service.GetPRTLabels();
+            ViewBag.Labels = service.FormatDateTime(labels);
+
+            return View();
+        }
+
+        public ActionResult PRTChartRunTime()
+        {
+            var service = CreatePrtScoresServices();
+            ViewBag.PRT = service.GetPRTChartRunTime();
+
+            var labels = service.GetPRTLabels();
+            ViewBag.Labels = service.FormatDateTime(labels);
+
+            return View();
+        }
     }
 }

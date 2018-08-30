@@ -1,0 +1,39 @@
+﻿@model PRT.Model.PrtDetail
+@using Chart.Mvc.ComplexChart;
+@using Chart.Mvc.Extensions
+@Scripts.Render("~/Scripts/Chart.js")
+<h2>Run Times</h2>
+@{
+    var barChart = new LineChart();
+    barChart.ChartConfiguration.ScaleFontColor = "#FFFFFF";
+    barChart.ComplexData.Labels.AddRange(ViewBag.Labels);
+    barChart.ComplexData.Datasets.AddRange(new List<ComplexDataset>
+{
+
+new ComplexDataset
+{
+Data = ViewBag.PRT,
+Label = "My Second dataset",
+FillColor = "#FFD700",
+StrokeColor = "#0000FF",
+PointColor = "#0000FF",
+PointStrokeColor = "#fff",
+PointHighlightFill = "#fff",
+PointHighlightStroke = "rgba(151,187,205,1)",
+
+
+}
+});
+}
+<canvas id="myCanvas" width="940" height="400"></canvas>
+@Html.CreateChart("myCanvas", barChart)
+
+<br />
+<br />
+<div class="container">
+    <div class="row col-md-offset-5">
+        <div>
+            @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-primary btn-large" })
+        </div>
+    </div>
+</div>

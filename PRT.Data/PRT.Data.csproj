@@ -67,6 +67,14 @@
     <Compile Include="Migrations\201808212020590_change MM to double.Designer.cs">
       <DependentUpon>201808212020590_change MM to double.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808291831540_changed to double.cs" />
+    <Compile Include="Migrations\201808291831540_changed to double.Designer.cs">
+      <DependentUpon>201808291831540_changed to double.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808301722379_adding RtSeconds for the run time chart.cs" />
+    <Compile Include="Migrations\201808301722379_adding RtSeconds for the run time chart.Designer.cs">
+      <DependentUpon>201808301722379_adding RtSeconds for the run time chart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NutritionGuide.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808212020590_change MM to double.resx">
       <DependentUpon>201808212020590_change MM to double.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808291831540_changed to double.resx">
+      <DependentUpon>201808291831540_changed to double.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808301722379_adding RtSeconds for the run time chart.resx">
+      <DependentUpon>201808301722379_adding RtSeconds for the run time chart.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

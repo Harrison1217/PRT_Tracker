@@ -12,15 +12,15 @@ namespace PRT.Model
         public int PrtId { get; set; }
 
         [Display(Name ="Number of Pushups")]
-        public int NumPushups { get; set; }
+        public double NumPushups { get; set; }
 
         [Display(Name = "Number of Situps")]
-        public int NumSitups { get; set; }
+        public double NumSitups { get; set; }
 
   
         public double MM { get; set; }
         
-        public decimal SS { get; set; }
+        public double SS { get; set; }
         private string runTime;
         [Display(Name = "1.5 Mile Run Time")]
         public string RunTime
@@ -42,7 +42,9 @@ namespace PRT.Model
         [Display(Name ="Date of PRT")]
         public DateTime PrtDate { get; set; }
 
-        
+        public double RtSeconds { get; set; }
+
+
     }
     
 }

@@ -12,13 +12,13 @@ namespace PRT.Model
         [Display(Name ="Enter Date")]
         public DateTime Prt_Date { get; set; }
         [Display(Name = "Number of Pushups")]
-        public int Push_Ups { get; set; }
+        public double Push_Ups { get; set; }
         [Display(Name = "Number of Situps")]
-        public int Sit_Ups { get; set; }
+        public double Sit_Ups { get; set; }
         [Display(Name = "1.5 Mile Run Time Minutes")]
         public double MM { get; set; }
         [Display(Name ="1.5 Mile Run Time Seconds")]
-        public decimal SS { get; set; }
+        public double SS { get; set; }
 
 
 

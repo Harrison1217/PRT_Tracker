@@ -14,13 +14,13 @@ namespace PRT.Data
         [Required]
         public Guid UserID { get; set; }
         [Required]
-        public int NumPushups { get; set; }
+        public double NumPushups { get; set; }
         [Required]
-        public int NumSitUps { get; set; }
+        public double NumSitUps { get; set; }
         [Required]
         public double MM { get; set; }
         [Required]
-        public decimal SS { get; set; }
+        public double SS { get; set; }
 
         
         
@@ -49,6 +49,8 @@ namespace PRT.Data
 
         [Required]
         public DateTime PrtDate { get; set; }
+
+        public double RtSeconds { get; set; }
 
 
 

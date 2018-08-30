@@ -33,7 +33,8 @@ namespace PRT.Services
                     MM = model.MM,
                     SS = model.SS,         
                     RunTime = model.MM + ":" + model.SS,
-                    PrtDate = model.Prt_Date
+                    PrtDate = model.Prt_Date,
+                    RtSeconds = (model.MM * 60) + model.SS,
                     
 
                 };
@@ -67,8 +68,10 @@ namespace PRT.Services
                                     SS = e.SS,
                                     MM = e.MM,
                                     RunTime = e.RunTime,
-                                    PrtDate = e.PrtDate
+                                    PrtDate = e.PrtDate,
+                                    RtSeconds = e.RtSeconds
                                 }
+                          
                                 );
                 return query.ToArray();
             }
@@ -91,10 +94,89 @@ namespace PRT.Services
                         MM = entity.MM,
                         SS = entity.SS,
                         RunTime = entity.RunTime,
-                        PrtDate = entity.PrtDate
+                        PrtDate = entity.PrtDate,
+                        RtSeconds = entity.RtSeconds
                     };
 
             }
+        }
+
+        public List<double> GetPRTChartPushUps()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var query = from b in context.Scores
+                            where b.UserID == _userId
+                            orderby b.PrtDate
+                            select b.NumPushups;
+
+
+                List<double> plist = query.ToList();
+
+                return plist;
+
+            }
+        }
+
+        public List<double> GetPRTChartSitUps()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var query = from b in context.Scores
+                            where b.UserID == _userId
+                            orderby b.PrtDate
+                            select b.NumSitUps;
+
+
+                List<double> plist = query.ToList();
+
+                return plist;
+
+            }
+        }
+
+        public List<double> GetPRTChartRunTime()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var query = from b in context.Scores
+                            where b.UserID == _userId
+                            orderby b.PrtDate
+                            select b.RtSeconds;
+
+
+                List<double> plist = query.ToList();
+
+                return plist;
+
+            }
+        }
+
+        public List<DateTime> GetPRTLabels()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var query = from b in context.Scores
+                            where b.UserID == _userId
+                            orderby b.PrtDate
+                            select b.PrtDate;
+
+                List<DateTime> elist = query.ToList();
+
+                return elist;
+
+            }
+        }
+
+        public List<string> FormatDateTime(List<DateTime> list)
+        {
+            List<string> datelabel = new List<string>();
+            foreach (var item in list)
+            {
+
+                datelabel.Add(item.ToString("d"));
+            }
+            return datelabel;
         }
     }
 }
