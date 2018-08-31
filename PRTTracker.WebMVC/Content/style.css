@@ -17,7 +17,6 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: gold;
-  
   height: 100%;
   position: relative;
 }
@@ -25,7 +24,7 @@ table {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
-    background-color: #00008B;
+    background-color: #004674;
 }
 
 a {

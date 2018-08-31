@@ -10,21 +10,20 @@
 </div>
       
 <div class="row">
-    <div class="col-md-4">
-
-        <h2>@Html.ActionLink("Write A Goal", "Index", "Goal")</h2>
+    <div class="col-md-3">
+        <div class="col-md-offset-2">@Html.ActionLink("Write A Goal", "Index", "Goal", new { }, new { @class = "btn btn-primary btn-large btnBlue" })</div>
         <p>
             <img src="~/Content/Assets/NavyAnchor.jpg" />
         </p>
     </div>
     <div class="col-md-4">
-        <h2>@Html.ActionLink("Record A PRT", "Index", "PrtScores")</h2>
+        <div class="col-md-offset-4">@Html.ActionLink("PRT Tracker", "Index", "PrtScores", new { }, new { @class = "btn btn-primary btn-large btnBlue" })</div>
         <p>
             <img src="~/Content/Assets/BcaChart.jpg" height="500" width="350"/>
         </p>
     </div>
     <div class="col-md-4">
-        <h2>@Html.ActionLink("Enter Daily Meals", "Index", "Nutrition")</h2>
+        <div class="col-md-offset-5">@Html.ActionLink("Nutrition", "Index", "Nutrition",new { }, new { @class = "btn btn-primary btn-large btnBlue" })</div>
         <p><img src="~/Content/Assets/Foodpyrmid.jpg"</p>
     </div>
 </div>
