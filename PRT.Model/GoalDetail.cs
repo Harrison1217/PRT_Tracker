@@ -16,7 +16,7 @@ namespace PRT.Model
         public DateTimeOffset CreatedDate { get; set; }
         [Display(Name ="Date Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
-        public override string ToString() => $"[{GoalId}] {Title}";
+        public override string ToString() => $"[{GoalId}] {Title} {Content}";
 
     }
 }

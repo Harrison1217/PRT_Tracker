@@ -17,7 +17,10 @@ namespace PRT.Model
         [Display(Name ="Goal")]
         public string Content { get; set; }
 
-        public override string ToString() => Title;
+        public override string ToString() => Title + Content;
+        
+
+
 
     }
 }

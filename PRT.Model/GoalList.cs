@@ -13,11 +13,11 @@ namespace PRT.Model
         public int GoalId { get; set; }
         [Display(Name ="Your Goal")]            
         public string Title { get; set; }
+        public string Content { get; set; }
 
         [Display(Name="Date Created")]
         public DateTimeOffset CreatedDate { get; set; }
 
-        public override string ToString() => Title;
-
+        public override string ToString() => Title + Content;
     }
 }

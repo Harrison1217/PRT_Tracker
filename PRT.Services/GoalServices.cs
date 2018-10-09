@@ -21,12 +21,13 @@ namespace PRT.Services
 
         public bool GoalCreate(Goal_Create model)
         {
+
             var entity =
                 new Goals()
                 {
                     UserId = _userId,
-                    Title = model.Title,
-                    Content = model.Content,
+                    Title = Convert.ToString(model.Title),
+                    Content = Convert.ToString(model.Content),
                     CreatedDate = DateTimeOffset.Now
                 };
             using (var ctx = new ApplicationDbContext())
